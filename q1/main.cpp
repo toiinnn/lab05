@@ -1,41 +1,16 @@
-#include <iostream>
-using std::cout;
-using std::endl;
-
-#include <vector>
-using std::vector;
-
-#include <algorithm>
-using std::count;
-
-#include <cmath>
-using std::abs;
-
-#include <iterator>
-using std::distance;
-
-#include <numeric>
-using std::accumulate;
-
-template<typename InputIterator>
-InputIterator closest2mean(InputIterator first, InputIterator last)
-{	
-	
-	float media = accumulate(first, last, 0.0) / (distance(first, last));
-	auto maisProximo = first;
-
-	for (auto i = first+1; i != last; ++i)
-	{
-		if(abs(media - *i) < abs(media - *maisProximo))
-			maisProximo = i;
-	}
-	return maisProximo;
-}
+#include "inputIterator.h"
 
 int main()
 {
-	vector<int> v { 1, 2, 3, 30, 40, 50 };
-	auto result = closest2mean(v.begin(), v.end());
+	/*Um exemplo com inteiros*/
+	vector<int> i { 1, 2, 3, 30, 40, 50 };
+	auto result = closest2mean(i.begin(), i.end());
 	cout << (*result) << endl;
+
+	/*Um exemplo com floats*/
+	vector<float> f { 11.4, 6.7, 3.96, 94.2, 40.7, 85.4};
+	auto fResult = closest2mean(f.begin(), f.end());
+	cout << (*fResult) << endl;
+
 	return 0;
 }

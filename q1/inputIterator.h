@@ -20,6 +20,18 @@ using std::distance;
 #include <numeric>
 using std::accumulate;
 
+/**
+ * @brief      Essa função recebe um intervalo especificado por dois iteradores,
+ * 			   na qual os valores deverão ser somados e o retorno deve ser o valor mais pŕoximo
+ * 			   da média possível.
+ *
+ * @param[in]  first          The first value of interval
+ * @param[in]  last           The last value of interval
+ *
+ * @tparam     InputIterator  Template
+ *
+ * @return     The closest value of mean
+ */
 template<typename InputIterator>
 InputIterator closest2mean(InputIterator first, InputIterator last)
 {	

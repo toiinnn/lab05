@@ -19,6 +19,9 @@ using std::vector;
 using std::stringstream;
 
 
+/**
+ * @brief      Functor para verificar se um número é primo
+ */
 class ehPrimo
 {
 public:
@@ -37,6 +40,18 @@ public:
 
 
 
+/**
+ * @brief      Recebe um numero inteiro positivo para verificação e impressão
+ * 			   dos numeros primos do 1 até ele. O processo se dá com o uso da função
+ * 			   iota, que recebe um intervalo dado por dois iteradores, e adiciona esse
+ * 			   valor no terceiro parametro. Logo após vem a verificacao se um numero eh
+ * 			   primo ou não com o auxilio do functor eh primo, adicional a função find_if
+ * 			   da biblioteca algorithm.
+ * 		        
+ *			    
+ *
+ * @param[in]  numero  Um numero inteiro positivo
+ */
 void
 showPrimos(unsigned int numero)
 {
